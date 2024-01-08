@@ -1,8 +1,19 @@
-import antfu from '@antfu/eslint-config'
-const { FlatCompat } = require('@eslint/eslintrc')
-
-const compat = new FlatCompat()
+import antfu from "@antfu/eslint-config";
+import nextPlugin from "@next/eslint-plugin-next";
 
 export default antfu(
-  ...compat.extends("next/core-web-vitals"),
-)
+  {
+    vue: false,
+    ignores: ["node_modules", ".next"],
+  },
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    plugins: {
+      "@next/next": nextPlugin,
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs["core-web-vitals"].rules,
+    },
+  },
+);
