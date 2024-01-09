@@ -1,8 +1,14 @@
-export default function Home() {
+import { LinkCard } from '@/components/LinkCard/link-card'
+
+export const Home: React.FC = () => {
   return (
-    <div>
-      <h2 className="text-xl">Today</h2>
-      <p>Today's tasks</p>
-    </div>
+    <main>
+      <div className="grid grid-cols-3 gap-2">
+        <LinkCard href="/about" title="aboutme" />
+        <LinkCard href="/links" title="Links" />
+      </div>
+    </main>
   )
 }
+
+export default Home

@@ -6,8 +6,7 @@ import { ThemeToggleMenu } from './theme-toggle-menu'
 
 export const Header: FC = () => {
   return (
-    <header className="mx-auto flex h-16 max-w-7xl items-center justify-between">
-      <h1 className="text-2xl">Bayathy</h1>
+    <header className="mx-auto flex h-16 max-w-7xl items-center justify-end px-4">
       <ThemeProvider
         attribute="class"
         enableSystem

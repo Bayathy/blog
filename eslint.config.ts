@@ -7,28 +7,26 @@ import nextPlugin from '@next/eslint-plugin-next'
 import unUsedimport from 'eslint-plugin-unused-imports'
 
 // @ts-expect-error 型定義がパッケージにない
-import { FlatCompat } from '@eslint/eslintrc'
-
-const compat = new FlatCompat()
+import tailwindcssPlugin from 'eslint-plugin-tailwindcss'
 
 export default antfu(
   {
     vue: false,
     ignores: ['node_modules', '.next', 'tailwind.config.ts'],
     rules: {
-      'style/indent': 'off',
       'ts/no-unused-vars': 'off',
     },
   },
   {
-    files: ['**/*.ts', '**/*.tsx'],
     plugins: {
       '@next/next': nextPlugin,
       'unused-imports': unUsedimport,
+      'tailwindcss': tailwindcssPlugin,
     },
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
+      ...tailwindcssPlugin.configs.recommended.rules,
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
@@ -36,7 +34,4 @@ export default antfu(
       ],
     },
   },
-  ...compat.config({
-    extends: ['plugin:tailwindcss/recommended'],
-  }),
 )
