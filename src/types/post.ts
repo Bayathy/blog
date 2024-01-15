@@ -1,11 +1,9 @@
-import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
+import type { Image } from 'newt-client-js'
 
-export interface TypePostsFields {
-  title: EntryFieldTypes.Symbol
-  ogp?: EntryFieldTypes.AssetLink
-  createdAt: EntryFieldTypes.Date
-  content: EntryFieldTypes.RichText
+export interface Post {
+  _id: string
+  title: string
+  cardImage?: Image
+  createdAt: string
+  content: string
 }
-
-export type TypePostsSkeleton = EntrySkeletonType<TypePostsFields, 'posts'>
-export type TypePosts<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<TypePostsSkeleton, Modifiers, Locales>

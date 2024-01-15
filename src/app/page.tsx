@@ -1,9 +1,9 @@
-import { getPosts } from '@/api/get-posts'
+import { getArticles } from '@/api/getArticles'
 import { LinkCard } from '@/components/LinkCard/link-card'
 import { PostCardRow } from '@/components/PostCardRaw/post-card-row'
 
 export const Home: React.FC = async () => {
-  const data = await getPosts()
+  const data = await getArticles()
 
   return (
     <main className="flex flex-col gap-8">

@@ -1,11 +1,11 @@
-import { createClient } from 'contentful'
+import 'server-only'
+import process from 'node:process'
+import { createClient } from 'newt-client-js'
 
-// eslint-disable-next-line node/prefer-global/process
-const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
+const { CMS_SPACE_ID, CMS_API_KEY } = process.env
 
-// This is the standard Contentful client. It fetches
-// content that has been published.
 export const client = createClient({
-  space: CONTENTFUL_SPACE_ID!,
-  accessToken: CONTENTFUL_ACCESS_TOKEN!,
+  spaceUid: CMS_SPACE_ID as string,
+  token: CMS_API_KEY as string,
+  apiType: 'cdn',
 })

@@ -53,7 +53,7 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        'card-bg': 'bg-secondary/50 backdrop-blur-xl',
+        'card-bg': 'bg-secondary/50 text-blue-400 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70',
       },
       borderRadius: {
         lg: 'var(--radius)',
