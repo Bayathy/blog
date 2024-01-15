@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning>
       <body className={inter.className}>
         <Header />
-        <div className="mx-auto grid w-full max-w-7xl grid-flow-row grid-rows-[auto_1fr] px-4">
+        <div className="mx-auto mt-4 grid w-full max-w-7xl grid-flow-row grid-rows-[auto_1fr] px-4">
           {children}
         </div>
       </body>

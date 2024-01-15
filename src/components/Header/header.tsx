@@ -2,11 +2,33 @@
 
 import type { FC } from 'react'
 import { ThemeProvider } from 'next-themes'
+import { usePathname } from 'next/navigation'
+import { Pagination, PaginationContent, PaginationItem, PaginationLink } from '../ui/pagination'
 import { ThemeToggleMenu } from './theme-toggle-menu'
 
 export const Header: FC = () => {
+  const pathname = usePathname()
+
   return (
-    <header className="mx-auto flex h-16 max-w-7xl items-center justify-end px-4">
+    <header className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+      <Pagination className="mr-auto justify-start">
+        <PaginationContent className="*:px-2">
+          <PaginationLink href="/">
+            Home
+          </PaginationLink>
+          {pathname === '/about' && (
+            <>
+              <PaginationItem>
+                /
+              </PaginationItem>
+              <PaginationLink href="/about">
+                About
+              </PaginationLink>
+            </>
+          )}
+
+        </PaginationContent>
+      </Pagination>
       <ThemeProvider
         attribute="class"
         enableSystem

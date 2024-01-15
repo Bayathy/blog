@@ -8,7 +8,7 @@ interface Props {
 
 export const BlurCard: React.FC<Props> = ({ title, children }) => {
   return (
-    <Card className="bg-secondary/50 backdrop-blur-xl">
+    <Card className="bg-card-bg">
       <CardHeader>
         <CardTitle className="text-sm">
           {title}
