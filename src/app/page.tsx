@@ -1,4 +1,4 @@
-import { getArticles } from '@/api/getArticles'
+import { getArticles } from '@/api/get-articles'
 import { LinkCard } from '@/components/LinkCard/link-card'
 import { PostCardRow } from '@/components/PostCardRaw/post-card-row'
 

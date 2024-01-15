@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { AspectRatio } from '@radix-ui/react-aspect-ratio'
 import { Card, CardContent, CardHeader } from '../ui/card'
 import type { Post } from '@/types/post'
+import { formatDate } from '@/lib/format-date'
 
 interface Props {
   posts: Post[]
@@ -17,7 +18,7 @@ export const PostCardRow: React.FC<Props> = ({ posts }) => {
           href={`/posts/${post._id}`}
           key={post._id}
         >
-          <Card className="bg-secondary/50 text-blue-400 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70">
+          <Card className="bg-secondary/50 text-blue-600 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70 dark:text-blue-400">
             <CardHeader className="relative">
               <AspectRatio ratio={16 / 9}>
                 <Image
@@ -29,7 +30,8 @@ export const PostCardRow: React.FC<Props> = ({ posts }) => {
               </AspectRatio>
             </CardHeader>
             <CardContent>
-              {post.title}
+              <p>{post.title}</p>
+              <small>{formatDate(post.createdAt)}</small>
             </CardContent>
           </Card>
         </Link>

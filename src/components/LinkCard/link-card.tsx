@@ -11,7 +11,7 @@ interface Props {
 export const LinkCard: React.FC<Props> = ({ title, description, href }) => {
   return (
     <Link href={href}>
-      <Card className="bg-secondary/50 uppercase text-blue-400 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70">
+      <Card className="bg-secondary/50 uppercase text-blue-600 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70 dark:text-blue-400">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4">
           <CardTitle className="text-sm">
             {title}

@@ -57,3 +57,45 @@
     @apply bg-background text-foreground;
   }
 }
+
+.prose pre {
+  @apply rounded-lg;
+  background-color: #282c34;
+  overflow-x: auto;
+}
+
+:root {
+  --sh-class: rgb(97, 175, 239);
+  --sh-identifier: rgb(228, 191, 122);
+  --sh-sign: rgb(255, 255, 255);
+  --sh-string: rgb(150, 193, 120);
+  --sh-keyword: #ff9d00;
+  --sh-comment: #6a737d;
+  --sh-jsxliterals: #372f22;
+}
+
+.prose pre {
+  @apply rounded-lg overflow-x-auto w-full max-w-full;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
+}
+
+pre code {
+  counter-reset: sh-line-number;
+}
+
+.sh__line::before {
+  counter-increment: sh-line-number 1;
+  content: counter(sh-line-number);
+  margin-right: 24px;
+  text-align: right;
+  color: #a4a4a4;
+}
