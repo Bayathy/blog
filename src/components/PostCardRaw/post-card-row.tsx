@@ -12,14 +12,14 @@ interface Props {
 
 export const PostCardRow: React.FC<Props> = ({ posts }) => {
   return (
-    <div className="grid w-full grid-cols-3 gap-4">
+    <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
       {posts.map(post => (
         <Link
           href={`/posts/${post._id}`}
           key={post._id}
         >
-          <Card className="bg-secondary/50 text-blue-600 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70 dark:text-blue-400">
-            <CardHeader className="relative">
+          <Card className="bg-secondary/50 text-blue-600 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70 dark:text-blue-400 ">
+            <CardHeader className="relative order-2 md:order-1">
               <AspectRatio ratio={16 / 9}>
                 <Image
                   fill

@@ -27,6 +27,28 @@ export const Header: FC = () => {
             </>
           )}
 
+          {pathname === '/links' && (
+            <>
+              <PaginationItem>
+                /
+              </PaginationItem>
+              <PaginationLink href="/links">
+                Links
+              </PaginationLink>
+            </>
+          )}
+
+          {pathname.startsWith('/posts') && (
+            <>
+              <PaginationItem>
+                /
+              </PaginationItem>
+              <PaginationLink href="/posts">
+                Posts
+              </PaginationLink>
+            </>
+          )}
+
         </PaginationContent>
       </Pagination>
       <ThemeProvider

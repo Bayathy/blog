@@ -6,7 +6,7 @@ export async function getArticles() {
     appUid: 'blog',
     modelUid: 'post',
     query: {
-      select: ['_id', 'title', 'cardImage', 'createdAt', 'content'],
+      select: ['_id', 'title', 'description', 'cardImage', 'createdAt', 'content'],
     },
   })
   return data.items

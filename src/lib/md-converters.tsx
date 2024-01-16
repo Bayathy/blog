@@ -43,9 +43,8 @@ export function createHeading(level: number) {
       `h${level}`,
       { id: slug, ...props },
       <a href={`#${slug}`}>
-        <span></span>
+        <span>{children}</span>
       </a>,
-      children,
     )
   }
 }

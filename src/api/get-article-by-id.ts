@@ -8,7 +8,7 @@ export async function getArticleById(id: string) {
     modelUid: 'post',
     contentId: id,
     query: {
-      select: ['_id', 'title', 'cardImage', 'createdAt', 'content'],
+      select: ['_id', 'description', 'title', 'cardImage', 'createdAt', 'content'],
     },
   })
   return {
