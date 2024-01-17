@@ -5,7 +5,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { Header } from '@/components/Header/header'
 
-const sawarabi_regular = localFont({ src: './subset-ZenMaruGothic-Regular.woff2', weight: '400' })
+const ZenMaruRegular = localFont({ src: './subset-ZenMaruGothic-Regular.woff2', weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Bayathy.dev',
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className={sawarabi_regular.className}>
+      <body className={ZenMaruRegular.className}>
         <div className="mb-12 grid min-h-[100lvh] grid-flow-row grid-cols-[100%] grid-rows-[auto_1fr]">
           <Header />
           <div className="mx-auto mt-4 w-full max-w-7xl px-4">
