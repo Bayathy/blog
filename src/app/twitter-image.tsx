@@ -11,8 +11,8 @@ export const size = {
 export const contentType = 'image/png'
 
 export default async function Image() {
-  const sawarabiRegular = fetch(
-    new URL('./Sawarabi.ttf', import.meta.url),
+  const zenMaruRegular = fetch(
+    new URL('./subset-ZenMaruGothic-Regular.woff2', import.meta.url),
   ).then(res => res.arrayBuffer())
 
   return new ImageResponse(
@@ -49,7 +49,7 @@ export default async function Image() {
       fonts: [
         {
           name: 'Inter',
-          data: await sawarabiRegular,
+          data: await zenMaruRegular,
           style: 'normal',
           weight: 400,
         },

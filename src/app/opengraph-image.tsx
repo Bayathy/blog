@@ -12,7 +12,7 @@ export const contentType = 'image/png'
 
 export default async function Image() {
   const sawarabiRegular = fetch(
-    new URL('./Sawarabi.ttf', import.meta.url),
+    new URL('./subset-ZenMaruGothic-Regular.woff2', import.meta.url),
   ).then(res => res.arrayBuffer())
 
   return new ImageResponse(

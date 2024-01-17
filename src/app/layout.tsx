@@ -5,7 +5,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { Header } from '@/components/Header/header'
 
-const sawarabi_regular = localFont({ src: './Sawarabi.ttf', weight: '400' })
+const sawarabi_regular = localFont({ src: './subset-ZenMaruGothic-Regular.woff2', weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Bayathy.dev',
