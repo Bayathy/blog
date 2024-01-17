@@ -12,7 +12,7 @@ export const Home: React.FC = async () => {
       <h2 className="text-xl">Profile</h2>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
         <LinkCard href="/about" title="aboutme" />
-        <LinkCard href="/links" title="Links" />
+        <LinkCard href="/works" title="Works" />
       </div>
       <hr className="border-gray-300 dark:border-gray-700" />
       <h2 className="text-xl">Posts</h2>
