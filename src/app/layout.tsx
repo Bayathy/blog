@@ -20,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       <body className={sawarabi_regular.className}>
-        <Header />
-        <div className="mx-auto mt-4 grid w-full max-w-7xl grid-flow-row grid-rows-[auto_1fr] px-4">
-          {children}
+        <div className="grid min-h-screen grid-flow-row grid-cols-[100%] grid-rows-[auto_1fr]">
+          <Header />
+          <div className="mx-auto mt-4 w-full max-w-7xl px-4">
+            {children}
+          </div>
         </div>
       </body>
     </html>

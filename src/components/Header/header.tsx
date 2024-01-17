@@ -10,7 +10,7 @@ export const Header: FC = () => {
   const pathname = usePathname()
 
   return (
-    <header className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+    <header className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4">
       <Pagination className="mr-auto justify-start">
         <PaginationContent className="*:px-2">
           <PaginationLink href="/">
