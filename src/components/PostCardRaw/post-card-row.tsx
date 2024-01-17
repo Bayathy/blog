@@ -23,7 +23,7 @@ export const PostCardRow: React.FC<Props> = ({ posts }) => {
               <AspectRatio ratio={16 / 9}>
                 <Image
                   fill
-                  src={post.cardImage ? post.cardImage : '/images/placeholder.png'}
+                  src={post.cardImage ? post.cardImage : '/placeholder.svg'}
                   alt={post.title}
                   className="object-contain"
                 />
