@@ -4,7 +4,7 @@ import { PostCardRow } from '@/components/PostCardRaw/post-card-row'
 
 export const revalidate = 60 * 60
 
-export const Home: React.FC = async () => {
+export default async function Home() {
   const data = await getArticles()
 
   return (
@@ -20,5 +20,3 @@ export const Home: React.FC = async () => {
     </main>
   )
 }
-
-export default Home
