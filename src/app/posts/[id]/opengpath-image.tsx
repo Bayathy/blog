@@ -18,13 +18,9 @@ export default async function Image({ params }: { params: { id: string } }) {
     modelUid: 'post',
     contentId: params.id,
     query: {
-      select: ['title', 'cardImage'],
+      select: ['title'],
     },
   })
-
-  const sawarabiRegular = fetch(
-    new URL('../../Sawarabi.ttf', import.meta.url),
-  ).then(res => res.arrayBuffer())
 
   return new ImageResponse(
     (
@@ -55,16 +51,5 @@ export default async function Image({ params }: { params: { id: string } }) {
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [
-        {
-          name: 'Inter',
-          data: await sawarabiRegular,
-          style: 'normal',
-          weight: 400,
-        },
-      ],
-    },
   )
 }
