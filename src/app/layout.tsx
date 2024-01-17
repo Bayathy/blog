@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import localFont from 'next/font/local'
+
+import './globals.css'
+import { Header } from '@/components/Header/header'
+
+const sawarabi_regular = localFont({ src: './Sawarabi.ttf', weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +18,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ja" suppressHydrationWarning>
+      <body className={sawarabi_regular.className}>
+        <div className="grid min-h-screen grid-flow-row grid-cols-[100%] grid-rows-[auto_1fr]">
+          <Header />
+          <div className="mx-auto mt-4 w-full max-w-7xl px-4">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
