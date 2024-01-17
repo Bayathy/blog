@@ -1,6 +1,5 @@
 import Markdown from 'react-markdown'
 import { highlight } from 'sugar-high'
-import { format } from 'date-fns'
 import { getArticleById } from '@/api/get-article-by-id'
 import { createHeading, createImage } from '@/lib/md-converters'
 
@@ -8,12 +7,14 @@ export const revalidate = 60 * 60
 
 async function Post({ params }: { params: { id: string } }) {
   const data = await getArticleById(params.id)
+
+  const date = new Date(data.createdAt).toLocaleDateString()
   return (
     <article className="flex flex-col gap-4">
       <h1 className="text-4xl">{data.title}</h1>
       <p>
         投稿日：
-        {format(new Date(data.createdAt), 'yyyy/MM/dd')}
+        {date}
       </p>
       <div className="rounded-md bg-secondary p-4">
         <p>{data.description}</p>
