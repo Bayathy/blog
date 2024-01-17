@@ -13,7 +13,7 @@ export const LinkCard: React.FC<Props> = ({ title, description, href }) => {
     <Link href={href}>
       <Card className="bg-secondary/50 uppercase text-blue-600 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70 dark:text-blue-400">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4">
-          <CardTitle className="text-sm">
+          <CardTitle className="text-sm tracking-wider">
             {title}
           </CardTitle>
           <LinkIcon width={20} height={20} className="m-0" />

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 
 import './globals.css'
 import { Header } from '@/components/Header/header'
 
-const inter = Inter({ subsets: ['latin'] })
+const sawarabi_regular = localFont({ src: './Sawarabi.ttf', weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={sawarabi_regular.className}>
         <Header />
         <div className="mx-auto mt-4 grid w-full max-w-7xl grid-flow-row grid-rows-[auto_1fr] px-4">
           {children}
