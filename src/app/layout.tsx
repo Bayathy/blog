@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 
-import localFont from 'next/font/local'
-
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header/header'
 
-const ZenMaruRegular = localFont({ src: './subset-ZenMaruGothic-Regular.woff2', weight: '400' })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Bayathy.dev',
@@ -20,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className={ZenMaruRegular.className}>
+      <body className={inter.className}>
         <div className="mb-12 grid min-h-[100lvh] grid-flow-row grid-cols-[100%] grid-rows-[auto_1fr]">
           <Header />
           <div className="mx-auto mt-4 w-full max-w-7xl px-4">
