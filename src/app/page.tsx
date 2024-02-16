@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { LinkCard } from '@/components/LinkCard/link-card'
 import { PostCardRow } from '@/components/PostCardRaw/post-card-row'
+import { Separator } from '@/components/ui/separator'
 
 export const revalidate = 60 * 60
 
@@ -12,7 +13,7 @@ export default async function Home() {
         <LinkCard href="/about" title="aboutme" />
         <LinkCard href="/works" title="Works" />
       </div>
-      <hr className="border-gray-300 dark:border-gray-700" />
+      <Separator />
       <h2 className="text-xl">Posts</h2>
       <Suspense fallback={<div>Loading...</div>}>
         <PostCardRow />
