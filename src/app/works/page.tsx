@@ -2,6 +2,8 @@ import { getWorks } from '@/api/ger-works'
 import { WorksCard } from '@/components/WorksCard'
 import { Separator } from '@/components/ui/separator'
 
+export const revalidate = 60 * 60
+
 async function Works() {
   const data = await getWorks()
   return (

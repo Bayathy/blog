@@ -1,7 +1,8 @@
 import { Modal } from '@/components/Modal'
-import type { Work } from '@/types/work'
 
-const DetailModal: React.FC<{ work: Work }> = ({ work }) => {
+export const revalidate = 60 * 60
+
+function DetailModal() {
   return (
     <Modal>
       <p>tetss</p>
