@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Link as LinkIcon } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 
 interface Props {
@@ -16,7 +15,6 @@ export const LinkCard: React.FC<Props> = ({ title, description, href }) => {
           <CardTitle className="text-sm tracking-wider">
             {title}
           </CardTitle>
-          <LinkIcon width={20} height={20} className="m-0" />
         </CardHeader>
         {description && (
           <CardContent>

@@ -17,7 +17,7 @@ export function PostCard({ post }: Props) {
       href={`/posts/${post._id}`}
       key={post._id}
     >
-      <Card className="bg-secondary/50 text-blue-600 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70 dark:text-blue-400 ">
+      <Card className="bg-secondary/50 text-blue-600 backdrop-blur-xl duration-200 ease-in hover:bg-secondary/70 dark:text-blue-400">
         <CardHeader className="relative order-2 md:order-1">
           <AspectRatio ratio={16 / 9}>
             <Image

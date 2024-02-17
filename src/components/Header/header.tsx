@@ -14,11 +14,11 @@ export const Header: FC = () => {
   return (
     <header className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4">
       <Pagination className="mr-auto justify-start">
-        <PaginationContent className="*:px-2">
+        <PaginationContent className="gap-0 *:px-2">
           <PaginationLink href="/">
             Home
           </PaginationLink>
-          {pathname === '/about' && (
+          {pathname === '/aboutme' && (
             <>
               <PaginationItem>
                 /
@@ -29,13 +29,13 @@ export const Header: FC = () => {
             </>
           )}
 
-          {pathname === '/links' && (
+          {pathname.startsWith('/works') && (
             <>
               <PaginationItem>
                 /
               </PaginationItem>
-              <PaginationLink href="/links">
-                Links
+              <PaginationLink href="/works">
+                Works
               </PaginationLink>
             </>
           )}

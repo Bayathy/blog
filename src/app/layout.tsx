@@ -9,7 +9,17 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Bayathy.dev',
   description: 'ばやしのポートフォリオサイト兼ブログ。',
-
+  openGraph: {
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://bayathy.dev',
+    siteName: 'Bayathy.dev',
+  },
+  twitter: {
+    site: '@Bayathy',
+    card: 'summary_large_image',
+    description: 'ばやしのポートフォリオサイト兼ブログ。',
+  },
 }
 
 export default function RootLayout({
