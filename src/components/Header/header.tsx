@@ -18,7 +18,7 @@ export const Header: FC = () => {
           <PaginationLink href="/">
             Home
           </PaginationLink>
-          {pathname === '/about' && (
+          {pathname === '/aboutme' && (
             <>
               <PaginationItem>
                 /
@@ -29,7 +29,7 @@ export const Header: FC = () => {
             </>
           )}
 
-          {pathname === '/works' && (
+          {pathname.startsWith('/works') && (
             <>
               <PaginationItem>
                 /

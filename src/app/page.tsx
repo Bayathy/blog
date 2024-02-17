@@ -10,7 +10,7 @@ export default async function Home() {
     <main className="flex flex-col gap-8">
       <h2 className="text-xl">Profile</h2>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
-        <LinkCard href="/about" title="aboutme" />
+        <LinkCard href="/aboutme" title="aboutme" />
         <LinkCard href="/works" title="Works" />
       </div>
       <Separator />
