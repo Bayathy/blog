@@ -5,5 +5,7 @@ export interface Work {
   Image: {
     src: string
     alt: string
+    width: number
+    height: number
   }
 }
