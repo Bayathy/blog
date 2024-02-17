@@ -5,7 +5,7 @@ import { createHeading, createImage } from '@/lib/md-converters'
 
 export const revalidate = 60 * 60
 
-export async function generateMetaData({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: { params: { id: string } }) {
   const data = await getArticleById(params.id)
   return {
     title: data.title,
