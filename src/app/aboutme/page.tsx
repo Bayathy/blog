@@ -6,7 +6,7 @@ function AboutMe() {
       <h1 className="text-2xl">About Me</h1>
       <div>
         <div className="mx-auto w-72">
-          <ResizableImage src="/profile50.webp" alt="Bayathyのウロフィール写真" fill ratio={1 / 1} className="rounded-full" />
+          <ResizableImage src="/profile5.webp" alt="Bayathyのウロフィール写真" fill ratio={1 / 1} className="rounded-full" />
         </div>
         <div className="mt-4">
           <p>
