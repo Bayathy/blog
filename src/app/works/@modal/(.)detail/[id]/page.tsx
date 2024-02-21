@@ -21,7 +21,7 @@ async function DetailModal({ params }: { params: { id: string } }) {
       </div>
       <h2 className="mt-4 text-balance break-all text-xl">{data.title}</h2>
       <Separator />
-      <ScrollArea className="prose mt-4 h-80 dark:prose-invert">
+      <ScrollArea className="prose mt-4 h-80 dark:prose-invert [&_a]:text-blue-400">
         <div dangerouslySetInnerHTML={{ __html: data.description }} />
       </ScrollArea>
     </Modal>
