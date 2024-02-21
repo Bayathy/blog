@@ -20,7 +20,7 @@ async function Post({ params }: { params: { id: string } }) {
   const date = new Date(data.createdAt).toLocaleDateString()
   return (
     <article className="mt-8 flex flex-col gap-4">
-      <h1 className="text-4xl">{data.title}</h1>
+      <h1 className="text-2xl">{data.title}</h1>
       <p>
         投稿日：
         {date}

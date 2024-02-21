@@ -23,9 +23,9 @@ export const Header: FC = () => {
               <PaginationItem>
                 /
               </PaginationItem>
-              <PaginationLink href="/about">
-                About
-              </PaginationLink>
+              <PaginationItem>
+                About Me
+              </PaginationItem>
             </>
           )}
 
@@ -34,9 +34,9 @@ export const Header: FC = () => {
               <PaginationItem>
                 /
               </PaginationItem>
-              <PaginationLink href="/works">
+              <PaginationItem>
                 Works
-              </PaginationLink>
+              </PaginationItem>
             </>
           )}
 
@@ -45,9 +45,9 @@ export const Header: FC = () => {
               <PaginationItem>
                 /
               </PaginationItem>
-              <PaginationLink href="/posts">
+              <PaginationItem>
                 Posts
-              </PaginationLink>
+              </PaginationItem>
             </>
           )}
 
