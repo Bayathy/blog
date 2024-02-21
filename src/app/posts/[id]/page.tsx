@@ -2,6 +2,7 @@ import Markdown from 'react-markdown'
 import { highlight } from 'sugar-high'
 import { getArticleById } from '@/api/get-article-by-id'
 import { createHeading, createImage } from '@/lib/md-converters'
+import { Separator } from '@/components/ui/separator'
 
 export const revalidate = 60 * 60
 
@@ -18,15 +19,16 @@ async function Post({ params }: { params: { id: string } }) {
 
   const date = new Date(data.createdAt).toLocaleDateString()
   return (
-    <article className="flex flex-col gap-4">
+    <article className="mt-8 flex flex-col gap-4">
       <h1 className="text-4xl">{data.title}</h1>
       <p>
         投稿日：
         {date}
       </p>
-      <div className="rounded-md bg-secondary p-4">
+      <div className="mt-4 rounded-md bg-secondary p-4">
         <p>{data.description}</p>
       </div>
+      <Separator />
       <div className="prose mt-8 max-w-full dark:prose-invert">
         <Markdown
           components={{
